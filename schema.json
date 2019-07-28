@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema#",
+  "title": "Bank schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique project code for the bank",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "description": "Two letters code of bank country (ISO 3166-1 alpha-2)",
+      "required": true
+    },
+    "localTitle": {
+      "type": "string",
+      "description": "Bank name in local language",
+      "required": true
+    },
+    "engTitle": {
+      "type": "string",
+      "description": "Bank name in English",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "description": "Link to official bank website",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "description": "Bank brand color",
+      "required": true
+    },
+    "defunct": {
+      "type": "boolean",
+      "description": "Flag for banks with revoked license"
+    },
+    "prefixes": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 10000
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "required": true
+    }
+  }
+}
